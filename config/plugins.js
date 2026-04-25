@@ -1,14 +1,23 @@
 module.exports = ({ env }) => ({
-  "users-permissions": {
-    config: {
-      jwtSecret: env("JWT_SECRET"),
-    },
-  },
   upload: {
     config: {
-      provider: "local",
+      provider: 'aws-s3',
+      providerOptions: {
+        s3Options: {
+          credentials: {
+            accessKeyId: env('R2_ACCESS_KEY_ID'),
+            secretAccessKey: env('R2_SECRET_ACCESS_KEY'),
+          },
+          endpoint: env('R2_ENDPOINT'),
+          region: 'auto',
+          params: {
+            Bucket: env('R2_BUCKET_NAME'),
+          },
+        },
+      },
       actionOptions: {
         upload: {},
+        uploadStream: {},
         delete: {},
       },
     },
