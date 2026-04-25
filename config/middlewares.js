@@ -1,4 +1,5 @@
 module.exports = [
+  'global::health',
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
