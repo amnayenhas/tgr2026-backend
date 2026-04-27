@@ -500,7 +500,7 @@ export interface ApiCuratorCurator extends Struct.CollectionTypeSchema {
     avatar: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     bio: Schema.Attribute.RichText &
@@ -512,7 +512,7 @@ export interface ApiCuratorCurator extends Struct.CollectionTypeSchema {
     city: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
@@ -521,7 +521,7 @@ export interface ApiCuratorCurator extends Struct.CollectionTypeSchema {
     country: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
@@ -533,7 +533,7 @@ export interface ApiCuratorCurator extends Struct.CollectionTypeSchema {
     is_resident: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
@@ -548,7 +548,7 @@ export interface ApiCuratorCurator extends Struct.CollectionTypeSchema {
       Schema.Attribute.Unique &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
@@ -566,7 +566,7 @@ export interface ApiCuratorCurator extends Struct.CollectionTypeSchema {
     social_links: Schema.Attribute.JSON &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     updatedAt: Schema.Attribute.DateTime;
@@ -606,7 +606,7 @@ export interface ApiMixMix extends Struct.CollectionTypeSchema {
     broadcast_date: Schema.Attribute.DateTime &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     chapters: Schema.Attribute.Relation<'oneToMany', 'api::chapter.chapter'>;
@@ -635,7 +635,7 @@ export interface ApiMixMix extends Struct.CollectionTypeSchema {
     episode_number: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.SetMinMax<
@@ -647,7 +647,7 @@ export interface ApiMixMix extends Struct.CollectionTypeSchema {
     is_premium: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<false>;
@@ -665,7 +665,7 @@ export interface ApiMixMix extends Struct.CollectionTypeSchema {
     tag: Schema.Attribute.JSON &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     title: Schema.Attribute.String &
@@ -684,7 +684,7 @@ export interface ApiMixMix extends Struct.CollectionTypeSchema {
     video_url: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
@@ -712,7 +712,7 @@ export interface ApiShowShow extends Struct.CollectionTypeSchema {
     accent_color: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
@@ -722,14 +722,14 @@ export interface ApiShowShow extends Struct.CollectionTypeSchema {
     active: Schema.Attribute.Boolean &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<true>;
     artwork: Schema.Attribute.Media<'images'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }>;
     category: Schema.Attribute.Enumeration<
@@ -737,7 +737,7 @@ export interface ApiShowShow extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
-          localized: true;
+          localized: false;
         };
       }> &
       Schema.Attribute.DefaultTo<'music'>;
